@@ -1,16 +1,15 @@
 # db-in-a-box
 
-# 🐳 Lab 24: Docker and Databases - Running a MySQL Container
+#  Lab 24: Docker and Databases - Running a MySQL Container
 
-## 📌 Overview
+##  Overview
 
 This repository demonstrates how to deploy and manage a MySQL database using Docker. It covers containerization, networking, data persistence, backup/restore strategies, and client-server interaction.
 
 This lab is designed for DevOps engineers and students learning containerized database management.
 
 ---
-
-## 🎯 Objectives
+##  Objectives
 
 By completing this lab, you will:
 
@@ -24,7 +23,7 @@ By completing this lab, you will:
 
 ---
 
-## 🧰 Prerequisites
+##  Prerequisites
 
 Before starting, ensure you have:
 
@@ -35,7 +34,7 @@ Before starting, ensure you have:
 
 ---
 
-## ⚙️ Lab Setup
+##  Lab Setup
 
 The lab environment includes:
 
@@ -45,10 +44,9 @@ The lab environment includes:
 * Text editors (nano/vim)
 
 ---
+##  Steps Performed
 
-## 🚀 Steps Performed
-
-### 🔹 1. MySQL Container Deployment
+###  1. MySQL Container Deployment
 
 * Pulled official MySQL image
 * Ran container with environment variables
@@ -56,7 +54,7 @@ The lab environment includes:
 
 ---
 
-### 🔹 2. Custom Docker Networking
+###  2. Custom Docker Networking
 
 * Created isolated Docker network
 * Attached MySQL container to custom network
@@ -64,7 +62,7 @@ The lab environment includes:
 
 ---
 
-### 🔹 3. Database Initialization
+###  3. Database Initialization
 
 * Created SQL schema:
 
@@ -76,7 +74,7 @@ The lab environment includes:
 
 ---
 
-### 🔹 4. Data Persistence (Volumes)
+###  4. Data Persistence (Volumes)
 
 * Mounted host directory to container
 * Ensured data survives container restart
@@ -84,7 +82,7 @@ The lab environment includes:
 
 ---
 
-### 🔹 5. Backup & Restore
+###  5. Backup & Restore
 
 * Created full and partial backups using `mysqldump`
 * Stored backups in host directory
@@ -93,7 +91,7 @@ The lab environment includes:
 
 ---
 
-### 🔹 6. MySQL Client Container
+###  6. MySQL Client Container
 
 * Connected to database using client container
 * Executed SQL queries
@@ -101,7 +99,7 @@ The lab environment includes:
 
 ---
 
-### 🔹 7. Monitoring Script
+###  7. Monitoring Script
 
 * Created Bash script to monitor:
 
@@ -112,7 +110,7 @@ The lab environment includes:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 mysql-lab/
@@ -129,7 +127,7 @@ mysql-lab/
 
 ---
 
-## 🛠️ Key Commands
+##  Key Commands
 
 ### Run MySQL Container
 
@@ -153,7 +151,7 @@ docker exec -i mysql-container mysql -u root -p database < backup.sql
 
 ---
 
-## ⚠️ Troubleshooting
+##  Troubleshooting
 
 ### Container Not Starting
 
@@ -177,7 +175,7 @@ sudo chown -R 999:999 ~/mysql-lab/mysql-data/
 
 ---
 
-## 🔐 Best Practices
+##  Best Practices
 
 * Use Docker volumes for persistent data
 * Never hardcode passwords in production
@@ -188,7 +186,7 @@ sudo chown -R 999:999 ~/mysql-lab/mysql-data/
 
 ---
 
-## 📊 Why This Lab Matters
+##  Why This Lab Matters
 
 This lab teaches real-world DevOps skills:
 
@@ -199,7 +197,7 @@ This lab teaches real-world DevOps skills:
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 * Use Docker Compose for multi-container setup
 * Implement MySQL replication
@@ -208,7 +206,7 @@ This lab teaches real-world DevOps skills:
 
 ---
 
-## 🧹 Cleanup
+##  Cleanup
 
 ```bash
 docker stop $(docker ps -aq)
