@@ -1,8 +1,8 @@
 
 
-##  Lab 24: Docker and Databases - Running a MySQL Container
+#  Docker and Databases - Running a MySQL Container
 
-###  Overview
+##  Overview
 
 This repository demonstrates how to deploy and manage a MySQL database using Docker. It covers containerization, networking, data persistence, backup/restore strategies, and client-server interaction.
 
